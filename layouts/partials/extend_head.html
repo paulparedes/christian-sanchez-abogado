@@ -1,0 +1,37 @@
+{{- /* Custom head extensions */ -}}
+
+{{- /* Preconnect for Google Fonts */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{{- /* SEO Meta Tags */ -}}
+<meta name="author" content="Christian Sánchez">
+<meta name="robots" content="index, follow">
+
+{{- /* Open Graph / Social Media */ -}}
+<meta property="og:locale" content="es_MX">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+
+{{- /* Twitter Card */ -}}
+<meta name="twitter:card" content="summary_large_image">
+
+{{- /* Canonical URL */ -}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Additional Schema.org for lawyers */ -}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Christian Sánchez - Abogado Laboralista",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "areaServed": "México",
+  "priceRange": "$$",
+  "serviceType": ["Derecho Laboral", "Argumentación Jurídica", "Asesoría Legal"],
+  "knowsAbout": ["Derecho del Trabajo", "Despidos", "Demandas Laborales", "Asesoría Empresarial"]
+}
+</script>
+{{ end }}

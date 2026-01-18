@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://christiansanchez-abogado.netlify.app/sitemap.xml

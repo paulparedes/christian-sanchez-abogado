@@ -1,0 +1,144 @@
+baseURL = 'https://christiansanchez-abogado.netlify.app/'
+languageCode = 'es'
+defaultContentLanguage = 'es'
+title = 'Christian Sánchez | Abogado Laboralista'
+theme = 'PaperMod'
+
+[pagination]
+  pagerSize = 10
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "Christian Sánchez | Abogado Laboralista"
+  description = "Abogado especializado en derecho laboral y argumentación jurídica. Asesoría legal profesional para trabajadores y empresas."
+  keywords = ["abogado laboralista", "derecho laboral", "argumentación jurídica", "asesoría legal", "derecho del trabajo"]
+  author = "Christian Sánchez"
+
+  defaultTheme = "light"
+  disableThemeToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  [params.assets]
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
+
+  [params.label]
+    text = "Christian Sánchez"
+    icon = "/apple-touch-icon.png"
+    iconHeight = 35
+
+  [params.profileMode]
+    enabled = false
+
+  [params.homeInfoParams]
+    Title = "Derecho Laboral & Argumentación Jurídica"
+    Content = """
+Bienvenido. Soy **Christian Sánchez**, abogado especializado en derecho laboral y argumentación jurídica.
+
+Mi compromiso es brindar asesoría legal de excelencia, defendiendo los derechos de trabajadores y ofreciendo soluciones jurídicas efectivas para empresas.
+
+[Conoce más sobre mis servicios →](/services/)
+"""
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/christiansanchez"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:contacto@christiansanchez.com"
+
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  [params.editPost]
+    disabled = true
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "inicio"
+    name = "Inicio"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "sobre-mi"
+    name = "Sobre Mí"
+    url = "/about/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "servicios"
+    name = "Servicios"
+    url = "/services/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "publicaciones"
+    name = "Publicaciones"
+    url = "/publications/"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "contacto"
+    name = "Contacto"
+    url = "/contact/"
+    weight = 60
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
